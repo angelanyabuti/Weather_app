@@ -38,16 +38,27 @@ namespace Weather_app
         //function to get weather information
         void getWeather()
         {
-             using (WebClient web= new WebClient())
+             using (WebClient web= new System.Net.WebClient())
             {
                 //url for downloading weather information
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q=(0)&appid=(1)", txtcity.Text,APIKey);
                 //download weather into JSON object
-                string json = web.DownloadString(url);
+               var json = web.DownloadString(url);
                 Weather.root Info = JsonConvert.DeserializeObject<Weather.root>(json);
                 pictureBox1.ImageLocation = "https://home.openweathermap.org/img/W/"+Info.weather[0].icon +".png";
-                label4.Text = Info.wind.speed.ToString();
+                label2.Text = Info.weather[0].main;
+                lblDetails.Text = Info.weather[0].description;
+                lblsunset.Text = Info.sys.sunset.ToString();
+                lblsunrise.Text = Info.sys.sunrise.ToString();
+                lblwspeed.Text = Info.wind.speed.ToString();
+                lblpressure.Text = Info.main.pressure.ToString();
+
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }
