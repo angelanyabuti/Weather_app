@@ -41,7 +41,7 @@ namespace Weather_app
              using (WebClient web= new System.Net.WebClient())
             {
                 //url for downloading weather information
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q=(0)&appid=(1)", txtcity.Text,APIKey);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", txtcity.Text,APIKey);
                 //download weather into JSON object
                var json = web.DownloadString(url);
                 Weather.root Info = JsonConvert.DeserializeObject<Weather.root>(json);
