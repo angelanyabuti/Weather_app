@@ -48,15 +48,22 @@ namespace Weather_app
                 pictureBox1.ImageLocation = "https://home.openweathermap.org/img/W/"+Info.weather[0].icon +".png";
                 label2.Text = Info.weather[0].main;
                 lblDetails.Text = Info.weather[0].description;
-                lblsunset.Text = Info.sys.sunset.ToString();
-                lblsunrise.Text = Info.sys.sunrise.ToString();
+                lblsunset.Text = convertDateTime(Info.sys.sunset).ToShortTimeString();
+                lblsunrise.Text = convertDateTime(Info.sys.sunrise).ToShortTimeString();
                 lblwspeed.Text = Info.wind.speed.ToString();
                 lblpressure.Text = Info.main.pressure.ToString();
                 lblTemp.Text = Info.main.temp.ToString();
                 lblHumidity.Text = Info.main.humidity.ToString();
             }
         }
-
+        //function to convert sunrise and sunset to current date time
+        DateTime convertDateTime(long sec)
+        {
+            //milliseconds are calculated from 1970
+            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
+            day = day.AddSeconds(sec).ToLocalTime();
+            return day;
+        }
         private void label4_Click(object sender, EventArgs e)
         {
              
