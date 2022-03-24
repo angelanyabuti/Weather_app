@@ -59,7 +59,7 @@ namespace Weather_app
         //function to convert sunrise and sunset to current date time
         DateTime convertDateTime(long sec)
         {
-            //milliseconds are calculated from 1970
+            //seconds are calculated from 1970
             DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
             day = day.AddSeconds(sec).ToLocalTime();
             return day;
