@@ -38,22 +38,18 @@ namespace Weather_app
             this.label = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtcity = new System.Windows.Forms.TextBox();
-            this.txtMaxtemp = new System.Windows.Forms.TextBox();
-            this.txtMintemp = new System.Windows.Forms.TextBox();
-            this.txtSpeedmph = new System.Windows.Forms.TextBox();
-            this.txtSpeedkph = new System.Windows.Forms.TextBox();
-            this.txtHumidity = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblsunrise = new System.Windows.Forms.Label();
             this.lblsunset = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblwspeed = new System.Windows.Forms.Label();
             this.lblpressure = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.lblHumidity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,41 +124,6 @@ namespace Weather_app
             this.txtcity.Size = new System.Drawing.Size(100, 20);
             this.txtcity.TabIndex = 7;
             // 
-            // txtMaxtemp
-            // 
-            this.txtMaxtemp.Location = new System.Drawing.Point(120, 60);
-            this.txtMaxtemp.Name = "txtMaxtemp";
-            this.txtMaxtemp.Size = new System.Drawing.Size(100, 20);
-            this.txtMaxtemp.TabIndex = 8;
-            // 
-            // txtMintemp
-            // 
-            this.txtMintemp.Location = new System.Drawing.Point(120, 100);
-            this.txtMintemp.Name = "txtMintemp";
-            this.txtMintemp.Size = new System.Drawing.Size(100, 20);
-            this.txtMintemp.TabIndex = 9;
-            // 
-            // txtSpeedmph
-            // 
-            this.txtSpeedmph.Location = new System.Drawing.Point(243, 100);
-            this.txtSpeedmph.Name = "txtSpeedmph";
-            this.txtSpeedmph.Size = new System.Drawing.Size(100, 20);
-            this.txtSpeedmph.TabIndex = 10;
-            // 
-            // txtSpeedkph
-            // 
-            this.txtSpeedkph.Location = new System.Drawing.Point(243, 140);
-            this.txtSpeedkph.Name = "txtSpeedkph";
-            this.txtSpeedkph.Size = new System.Drawing.Size(100, 20);
-            this.txtSpeedkph.TabIndex = 11;
-            // 
-            // txtHumidity
-            // 
-            this.txtHumidity.Location = new System.Drawing.Point(243, 186);
-            this.txtHumidity.Name = "txtHumidity";
-            this.txtHumidity.Size = new System.Drawing.Size(100, 20);
-            this.txtHumidity.TabIndex = 12;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(515, 126);
@@ -180,23 +141,6 @@ namespace Weather_app
             this.button1.Text = "Show";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(253, 455);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Show";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 276);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(572, 150);
-            this.dataGridView1.TabIndex = 16;
             // 
             // lblsunrise
             // 
@@ -244,26 +188,59 @@ namespace Weather_app
             this.lblpressure.TabIndex = 21;
             this.lblpressure.Text = "N/A";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 292);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Temperature";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 335);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Humidity";
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.Location = new System.Drawing.Point(131, 292);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(27, 13);
+            this.lblTemp.TabIndex = 24;
+            this.lblTemp.Text = "N/A";
+            // 
+            // lblHumidity
+            // 
+            this.lblHumidity.AutoSize = true;
+            this.lblHumidity.Location = new System.Drawing.Point(131, 335);
+            this.lblHumidity.Name = "lblHumidity";
+            this.lblHumidity.Size = new System.Drawing.Size(27, 13);
+            this.lblHumidity.TabIndex = 25;
+            this.lblHumidity.Text = "N/A";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(687, 505);
+            this.Controls.Add(this.lblHumidity);
+            this.Controls.Add(this.lblTemp);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblpressure);
             this.Controls.Add(this.lblwspeed);
             this.Controls.Add(this.lblsunset);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblsunrise);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtHumidity);
-            this.Controls.Add(this.txtSpeedkph);
-            this.Controls.Add(this.txtSpeedmph);
-            this.Controls.Add(this.txtMintemp);
-            this.Controls.Add(this.txtMaxtemp);
             this.Controls.Add(this.txtcity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label);
@@ -277,7 +254,6 @@ namespace Weather_app
             this.Text = "Weather";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,20 +269,17 @@ namespace Weather_app
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtcity;
-        private System.Windows.Forms.TextBox txtMaxtemp;
-        private System.Windows.Forms.TextBox txtMintemp;
-        private System.Windows.Forms.TextBox txtSpeedmph;
-        private System.Windows.Forms.TextBox txtSpeedkph;
-        private System.Windows.Forms.TextBox txtHumidity;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblsunrise;
         private System.Windows.Forms.Label lblsunset;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblwspeed;
         private System.Windows.Forms.Label lblpressure;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTemp;
+        private System.Windows.Forms.Label lblHumidity;
     }
 }
 

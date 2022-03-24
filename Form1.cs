@@ -52,7 +52,8 @@ namespace Weather_app
                 lblsunrise.Text = Info.sys.sunrise.ToString();
                 lblwspeed.Text = Info.wind.speed.ToString();
                 lblpressure.Text = Info.main.pressure.ToString();
-
+                lblTemp.Text = Info.main.temp.ToString();
+                lblHumidity.Text = Info.main.humidity.ToString();
             }
         }
 
